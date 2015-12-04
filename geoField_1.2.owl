@@ -1,0 +1,1387 @@
+ <rdfs:comment>GeoField Ontology
+as published in
+&quot;Towards semantically integrating geological data for an Augmented Reality educational application.&quot;
+Spring, 2015.
+Available at http://ontology.cybershare.utep.edu/RealPlus/
+
+Version 1.2, Fall 2015.</rdfs:comment>
+
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY simpleeq "http://ontology.cybershare.utep.edu/RealPlus/simpleeq.owl#" >
+    <!ENTITY GeoField "http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#" >
+    <!ENTITY WeatherOntology "https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://localhost/pihouser/ontologies/geoField.owl#"
+     xml:base="http://localhost/pihouser/ontologies/geoField.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:simpleeq="http://ontology.cybershare.utep.edu/RealPlus/simpleeq.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GeoField="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"
+     xmlns:WeatherOntology="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl">
+        <GeoField:authors>Miguel Royo-León, Perry I. Houser, Robert Munoz, Erick Estrada, Natalia Villanueva-Rosales, Deanna Pennington.</GeoField:authors>
+        <owl:versionInfo>1.2 </owl:versionInfo>
+        <rdfs:comment>GeoField Ontology
+as published in
+&quot;Towards semantically integrating geological data for an Augmented Reality educational application.&quot;
+Spring, 2015.
+Available at http://ontology.cybershare.utep.edu/RealPlus/
+
+Version 1.2, Fall 2015.</rdfs:comment>
+        <GeoField:notes>WARNING! 
+Do not start the reasoner, it will stuck in the last phase and show a java error.
+WARNING! 
+
+1. Class Person.
+Apt individuals for populating:
+    Miguel_Royo-Leon
+    Perry_I_Houser
+
+
+2. Class Earthquake.
+Apt individuals for populating:
+    us20003k43</GeoField:notes>
+        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uo5.owl"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/macuser/ontologies/2015/4/simpleeq"/>
+        <owl:imports rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/weather/WeatherOntology_1.03.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#authors -->
+
+    <owl:AnnotationProperty rdf:about="&GeoField;authors"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#notes -->
+
+    <owl:AnnotationProperty rdf:about="&GeoField;notes"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#hasValue -->
+
+    <owl:AnnotationProperty rdf:about="&WeatherOntology;hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasAge -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasAge"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasData -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasData"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasDate -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasDate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasDepartment -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasDepartment">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasFeature"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasFirstName -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasFirstName">
+        <rdfs:subPropertyOf rdf:resource="&GeoField;hasName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasFormat"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasInstution -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasInstution">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasLastName -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasLastName">
+        <rdfs:subPropertyOf rdf:resource="&GeoField;hasName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasLocation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasName -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasNotes -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasNotes">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasPartner -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasPartner">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasSite -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasSite"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasSketch -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasSketch">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasStudent -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasStudent"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasTime -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasTime">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasTitle -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasTitle"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasUnits -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;hasUnits"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#studentOf -->
+
+    <owl:ObjectProperty rdf:about="&GeoField;studentOf">
+        <owl:inverseOf rdf:resource="&GeoField;hasStudent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasDepartmentName -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasDepartmentName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasEarthquakeIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasEarthquakeIdentifier"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasFirstName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasGap -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasGap">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasID -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasID"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasLastName">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasMiddleName -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasMiddleName">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasNet -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasNet">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasPlaceStamp -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasPlaceStamp"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasStudy -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasStudy"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasStudyName -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasStudyName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasTimestamp"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;hasTitle"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#units -->
+
+    <owl:DatatypeProperty rdf:about="&GeoField;units"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Age -->
+
+    <owl:Class rdf:about="&GeoField;Age">
+        <rdfs:subClassOf rdf:resource="&GeoField;Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Approximately_Located -->
+
+    <owl:Class rdf:about="&GeoField;Approximately_Located">
+        <rdfs:subClassOf rdf:resource="&GeoField;Confidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Certain -->
+
+    <owl:Class rdf:about="&GeoField;Certain">
+        <rdfs:subClassOf rdf:resource="&GeoField;Confidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Concealed -->
+
+    <owl:Class rdf:about="&GeoField;Concealed">
+        <rdfs:subClassOf rdf:resource="&GeoField;Confidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Confidence -->
+
+    <owl:Class rdf:about="&GeoField;Confidence">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Date -->
+
+    <owl:Class rdf:about="&GeoField;Date">
+        <rdfs:subClassOf rdf:resource="&GeoField;Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Datum -->
+
+    <owl:Class rdf:about="&GeoField;Datum">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Department -->
+
+    <owl:Class rdf:about="&GeoField;Department">
+        <rdfs:subClassOf rdf:resource="&GeoField;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Elevation -->
+
+    <owl:Class rdf:about="&GeoField;Elevation">
+        <owl:equivalentClass rdf:resource="&GeoField;Z-axis"/>
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Feature_Name -->
+
+    <owl:Class rdf:about="&GeoField;Feature_Name">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Hour -->
+
+    <owl:Class rdf:about="&GeoField;Hour">
+        <rdfs:subClassOf rdf:resource="&GeoField;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Inferred -->
+
+    <owl:Class rdf:about="&GeoField;Inferred">
+        <rdfs:subClassOf rdf:resource="&GeoField;Confidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Instution -->
+
+    <owl:Class rdf:about="&GeoField;Instution">
+        <rdfs:subClassOf rdf:resource="&GeoField;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Layer -->
+
+    <owl:Class rdf:about="&GeoField;Layer">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Line -->
+
+    <owl:Class rdf:about="&GeoField;Line">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+        <owl:disjointWith rdf:resource="&GeoField;Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Location -->
+
+    <owl:Class rdf:about="&GeoField;Location">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Minute -->
+
+    <owl:Class rdf:about="&GeoField;Minute">
+        <rdfs:subClassOf rdf:resource="&GeoField;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Month -->
+
+    <owl:Class rdf:about="&GeoField;Month">
+        <rdfs:subClassOf rdf:resource="&GeoField;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Organization -->
+
+    <owl:Class rdf:about="&GeoField;Organization"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Partner -->
+
+    <owl:Class rdf:about="&GeoField;Partner">
+        <rdfs:subClassOf rdf:resource="&GeoField;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Person -->
+
+    <owl:Class rdf:about="&GeoField;Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeoField;hasPartner"/>
+                <owl:someValuesFrom rdf:resource="&GeoField;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Point -->
+
+    <owl:Class rdf:about="&GeoField;Point">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Postion -->
+
+    <owl:Class rdf:about="&GeoField;Postion">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Second -->
+
+    <owl:Class rdf:about="&GeoField;Second">
+        <rdfs:subClassOf rdf:resource="&GeoField;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Site_Name -->
+
+    <owl:Class rdf:about="&GeoField;Site_Name">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Sketch_Name -->
+
+    <owl:Class rdf:about="&GeoField;Sketch_Name">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Source -->
+
+    <owl:Class rdf:about="&GeoField;Source"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Source_Notes -->
+
+    <owl:Class rdf:about="&GeoField;Source_Notes">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Spatial -->
+
+    <owl:Class rdf:about="&GeoField;Spatial"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Spatial_Notes -->
+
+    <owl:Class rdf:about="&GeoField;Spatial_Notes">
+        <rdfs:subClassOf rdf:resource="&GeoField;Spatial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Speculative -->
+
+    <owl:Class rdf:about="&GeoField;Speculative">
+        <rdfs:subClassOf rdf:resource="&GeoField;Confidence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Study -->
+
+    <owl:Class rdf:about="&GeoField;Study"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Temporal -->
+
+    <owl:Class rdf:about="&GeoField;Temporal"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Time -->
+
+    <owl:Class rdf:about="&GeoField;Time">
+        <rdfs:subClassOf rdf:resource="&GeoField;Temporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#URL -->
+
+    <owl:Class rdf:about="&GeoField;URL">
+        <rdfs:subClassOf rdf:resource="&GeoField;Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#X-axis -->
+
+    <owl:Class rdf:about="&GeoField;X-axis">
+        <rdfs:subClassOf rdf:resource="&GeoField;Postion"/>
+        <owl:disjointWith rdf:resource="&GeoField;Y-axis"/>
+        <owl:disjointWith rdf:resource="&GeoField;Z-axis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Y-axis -->
+
+    <owl:Class rdf:about="&GeoField;Y-axis">
+        <rdfs:subClassOf rdf:resource="&GeoField;Postion"/>
+        <owl:disjointWith rdf:resource="&GeoField;Z-axis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Z-axis -->
+
+    <owl:Class rdf:about="&GeoField;Z-axis">
+        <rdfs:subClassOf rdf:resource="&GeoField;Postion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Year -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Year">
+        <rdfs:subClassOf rdf:resource="&GeoField;Time"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl# -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#112 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;112"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#1300 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;1300"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#175.6 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;175.6"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#2.588 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;2.588"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#2015 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;2015">
+        <GeoField:hasUnits rdf:resource="http://purl.obolibrary.org/obo/UO_0000036"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#21 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;21"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#324.5 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;324.5"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#39961 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;39961"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#42139 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;42139"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#43 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;43"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#513 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;513"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#52.1 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;52.1"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Andrea -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Andrea">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <WeatherOntology:hasWeatherReport rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasLocation rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasDate rdf:resource="&GeoField;39961"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Geologic_Sciences"/>
+        <GeoField:hasFeature rdf:resource="&GeoField;Napra%20Sandstone"/>
+        <GeoField:hasPartner rdf:resource="&GeoField;Perry"/>
+        <GeoField:hasSite rdf:resource="&GeoField;Site%201"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+        <GeoField:hasTime rdf:resource="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#CS -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;CS">
+        <rdf:type rdf:resource="&GeoField;Study"/>
+        <GeoField:hasStudyName rdf:datatype="&xsd;string">Computer Science</GeoField:hasStudyName>
+        <owl:sameAs rdf:resource="&GeoField;Computer_Science"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Cambrian -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Cambrian">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Cambrian513 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Cambrian513">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;513"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Cambrian"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Carboniferous -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Carboniferous">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Carboniferous324.5 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Carboniferous324.5">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;324.5"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Carboniferous"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Computer_Science -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Computer_Science">
+        <rdf:type rdf:resource="&GeoField;Study"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Conglomertate -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Conglomertate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Cretaceous -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Cretaceous">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Cretaceous112 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Cretaceous112">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;112"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Cretaceous"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Cristo_rey -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Cristo_rey">
+        <rdf:type rdf:resource="&GeoField;Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Del%20Rio%20Formation,%20limestone%20with%20exo-gyro-nails -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Del%20Rio%20Formation,%20limestone%20with%20exo-gyro-nails"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Department_of_Computer_Science -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Department_of_Computer_Science">
+        <rdf:type rdf:resource="&GeoField;Department"/>
+        <GeoField:hasDepartmentName rdf:datatype="&xsd;string">Department of Computer Science</GeoField:hasDepartmentName>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Department_of_Geologic_Sciences -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Department_of_Geologic_Sciences">
+        <rdf:type rdf:resource="&GeoField;Department"/>
+        <GeoField:hasDepartmentName rdf:datatype="&xsd;string">Department of Geological Sciences</GeoField:hasDepartmentName>
+        <owl:sameAs rdf:resource="&GeoField;Department_of_Geological_Sciences"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;UTEP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Department_of_Geological_Sciences -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Department_of_Geological_Sciences">
+        <rdf:type rdf:resource="&GeoField;Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Elevation -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Elevation">
+        <rdf:type rdf:resource="&GeoField;Elevation"/>
+        <GeoField:hasUnits rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Eocene -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Eocene">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Eocene52.1 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Eocene52.1">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;52.1"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Eocene"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Geology -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Geology">
+        <rdf:type rdf:resource="&GeoField;Study"/>
+        <GeoField:hasStudyName rdf:datatype="&xsd;string">Geology</GeoField:hasStudyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Houser -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Houser">
+        <GeoField:hasData rdf:resource="&GeoField;Houser_Dataset040115"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Houser_Dataset040115 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Houser_Dataset040115">
+        <rdf:type rdf:resource="&GeoField;Source"/>
+        <GeoField:hasID rdf:datatype="&xsd;integer">0001</GeoField:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Jen -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Jen">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <WeatherOntology:hasWeatherReport rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasLocation rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasDate rdf:resource="&GeoField;42139"/>
+        <GeoField:hasNotes rdf:resource="&GeoField;Conglomertate"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Geologic_Sciences"/>
+        <GeoField:hasPartner rdf:resource="&GeoField;John"/>
+        <GeoField:hasFeature rdf:resource="&GeoField;Mesa%20Bluff"/>
+        <GeoField:hasSite rdf:resource="&GeoField;Site%201"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+        <GeoField:hasTime rdf:resource="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#John -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;John">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <WeatherOntology:hasWeatherReport rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasLocation rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasDate rdf:resource="&GeoField;42139"/>
+        <GeoField:hasNotes rdf:resource="&GeoField;Conglomertate"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Geologic_Sciences"/>
+        <GeoField:hasPartner rdf:resource="&GeoField;Jen"/>
+        <GeoField:hasFeature rdf:resource="&GeoField;Mesa%20Bluff"/>
+        <GeoField:hasSite rdf:resource="&GeoField;Site%201"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+        <GeoField:hasTime rdf:resource="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Jurassic -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Jurassic">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Jurassic175.6 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Jurassic175.6">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;175.6"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Jurassic"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Leon -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Leon">
+        <owl:sameAs rdf:resource="&GeoField;Miguel_Leon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#MYA -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;MYA"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Masters -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Masters"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Mesa%20Bluff -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Mesa%20Bluff"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Miguel -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Miguel">
+        <owl:sameAs rdf:resource="&GeoField;Miguel_Leon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Miguel_Leon -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Miguel_Leon">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <GeoField:studentOf rdf:resource="&GeoField;CS"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Computer_Science"/>
+        <GeoField:hasTitle rdf:resource="&GeoField;PhD_Student"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;UTEP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Miguel_Royo-Leon -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Miguel_Royo-Leon">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <GeoField:hasStudy rdf:datatype="&xsd;string">Computer Science</GeoField:hasStudy>
+        <GeoField:hasTitle rdf:datatype="&xsd;string">M.Eng.</GeoField:hasTitle>
+        <GeoField:hasFirstName rdf:datatype="&xsd;string">Miguel</GeoField:hasFirstName>
+        <GeoField:hasLastName rdf:datatype="&xsd;string">Royo-Leon</GeoField:hasLastName>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Computer_Science"/>
+        <GeoField:hasPartner rdf:resource="&GeoField;Perry_I_Houser"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Miocene -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Miocene">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Miocene21 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Miocene21">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;21"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Miocene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Napra%20Sandstone -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Napra%20Sandstone"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Notes -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Notes">
+        <rdf:type rdf:resource="&GeoField;Source_Notes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Paleogene -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Paleogene">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Paleogene43 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Paleogene43">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;43"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Paleogene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Perry -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Perry">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <WeatherOntology:hasWeatherReport rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasLocation rdf:resource="http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#"/>
+        <GeoField:hasDate rdf:resource="&GeoField;39961"/>
+        <GeoField:hasPartner rdf:resource="&GeoField;Andrea"/>
+        <GeoField:hasNotes rdf:resource="&GeoField;Del%20Rio%20Formation,%20limestone%20with%20exo-gyro-nails"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Geologic_Sciences"/>
+        <GeoField:hasFeature rdf:resource="&GeoField;Shale"/>
+        <GeoField:hasSite rdf:resource="&GeoField;Site%201"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+        <GeoField:hasTime rdf:resource="http://purl.obolibrary.org/obo/UO_0000032"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Perry_I_Houser -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Perry_I_Houser">
+        <rdf:type rdf:resource="&GeoField;Person"/>
+        <GeoField:hasTitle rdf:datatype="&xsd;string">B.S.</GeoField:hasTitle>
+        <GeoField:hasStudy rdf:datatype="&xsd;string">Geology</GeoField:hasStudy>
+        <GeoField:hasLastName rdf:datatype="&xsd;string">Houser</GeoField:hasLastName>
+        <GeoField:hasMiddleName rdf:datatype="&xsd;string">I.</GeoField:hasMiddleName>
+        <GeoField:hasFirstName rdf:datatype="&xsd;string">Perry</GeoField:hasFirstName>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Geology"/>
+        <GeoField:hasInstution rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#PhD_Student -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;PhD_Student"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Pleistocene -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Pleistocene">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Pleistocene2.588 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Pleistocene2.588">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;2.588"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Pleistocene"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Proterozoic -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Proterozoic">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Proterozoic1300 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Proterozoic1300">
+        <rdf:type rdf:resource="&GeoField;Age"/>
+        <GeoField:hasDate rdf:resource="&GeoField;1300"/>
+        <GeoField:hasFormat rdf:resource="&GeoField;MYA"/>
+        <GeoField:hasAge rdf:resource="&GeoField;Proterozoic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Seconds -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Seconds">
+        <rdf:type rdf:resource="&GeoField;Second"/>
+        <GeoField:hasUnits rdf:resource="&GeoField;Seconds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Seven -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Seven"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Shale -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Shale">
+        <rdf:type rdf:resource="&GeoField;Feature_Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Site%201 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Site%201"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Site_1 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Site_1">
+        <rdf:type rdf:resource="&GeoField;Site_Name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#UTEP -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;UTEP">
+        <rdf:type rdf:resource="&GeoField;Instution"/>
+        <GeoField:hasDepartment rdf:resource="&GeoField;Department_of_Geologic_Sciences"/>
+        <owl:sameAs rdf:resource="&GeoField;University_of_Texas_at_El_Paso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Undergraduate -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Undergraduate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#University_of_Texas_at_El_Paso -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;University_of_Texas_at_El_Paso">
+        <rdf:type rdf:resource="&GeoField;Instution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#Weather -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;Weather"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#maxTempC -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;maxTempC">
+        <owl:sameAs rdf:resource="&GeoField;maxTempF"/>
+        <GeoField:hasUnits rdf:resource="http://purl.obolibrary.org/obo/UO_0000027"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#maxTempF -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;maxTempF">
+        <WeatherOntology:hasValue rdf:datatype="&xsd;float">80.8</WeatherOntology:hasValue>
+        <GeoField:hasUnits rdf:resource="http://purl.obolibrary.org/obo/UO_0000195"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/RealPlus/GeoField.owl#us20003k43 -->
+
+    <owl:NamedIndividual rdf:about="&GeoField;us20003k43">
+        <rdf:type rdf:resource="&simpleeq;Earthquake"/>
+        <simpleeq:hasLongitude rdf:datatype="&xsd;float">-106.7829</simpleeq:hasLongitude>
+        <GeoField:hasTimestamp rdf:datatype="&xsd;dateTimeStamp">2015-09-16T19:34:08.420Z</GeoField:hasTimestamp>
+        <GeoField:hasPlaceStamp rdf:datatype="&xsd;string">27km NNE of Socorro, New Mexico</GeoField:hasPlaceStamp>
+        <simpleeq:hasLatitude rdf:datatype="&xsd;float">34.2857</simpleeq:hasLatitude>
+        <simpleeq:hasDepth rdf:datatype="&xsd;float">5.8</simpleeq:hasDepth>
+        <GeoField:hasGap rdf:datatype="&xsd;float">61.0</GeoField:hasGap>
+        <GeoField:hasNet rdf:datatype="&xsd;string">us</GeoField:hasNet>
+        <GeoField:hasEarthquakeIdentifier rdf:datatype="&xsd;string">us20003k43</GeoField:hasEarthquakeIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000027 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000032 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000032"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000036 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000036"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000195 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000195"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;Masters"/>
+            <rdf:Description rdf:about="&GeoField;PhD_Student"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;PhD_Student"/>
+            <rdf:Description rdf:about="&GeoField;Undergraduate"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;Department_of_Computer_Science"/>
+            <rdf:Description rdf:about="&GeoField;Department_of_Geologic_Sciences"/>
+            <rdf:Description rdf:about="&GeoField;Department_of_Geological_Sciences"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;Approximately_Located"/>
+            <rdf:Description rdf:about="&GeoField;Certain"/>
+            <rdf:Description rdf:about="&GeoField;Inferred"/>
+            <rdf:Description rdf:about="&GeoField;Speculative"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;Masters"/>
+            <rdf:Description rdf:about="&GeoField;Undergraduate"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GeoField;Computer_Science"/>
+            <rdf:Description rdf:about="&GeoField;Geology"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
